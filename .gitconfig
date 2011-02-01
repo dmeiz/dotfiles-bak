@@ -1,0 +1,49 @@
+[core]
+  excludesfile = /Users/dan/.gitignore
+
+[alias]
+  c = commit
+  co = checkout
+  cb = checkout -b
+  br = branch
+  di = diff
+  dn = diff --name-status
+  dc = diff --cached
+  st = status
+  me = merge
+  ms = merge --squash
+  cp = cherry-pick
+  cn = cherry-pick -n
+  cm = commit
+  ca = commit -a
+  sr = svn rebase
+  sf = svn fetch
+  sd = svn dcommit
+  sh = show
+  rh = reset HEAD
+  l = log --pretty=oneline
+
+  [color]
+    branch = auto
+    diff = auto
+    status = auto
+  [color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+  [color "diff"]
+    meta = yellow 
+    frag = magenta 
+    old = red 
+    new = green 
+  [color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[user]
+	name = Dan Hensgen
+	email = dan@methodhead.com
+
+[github]
+	user = dmeiz
