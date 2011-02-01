@@ -1,0 +1,14 @@
+screen -t Code
+screen -t Mysql
+screen -t Shell
+screen -t Console
+screen -t Server
+
+bind -c jump c select Code
+bind -c jump m select Mysql
+bind -c jump s select Shell
+bind -c jump o select Console
+bind -c jump e select Server
+bindkey "^j" command -c jump
+
+shell -${SHELL}
