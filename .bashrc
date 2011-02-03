@@ -15,5 +15,7 @@ export GEM_OPEN_EDITOR=/Users/dan/bin/bvim
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+PATH=$PATH:/opt/local/bin
+
 . ~/.bashrc-local
 

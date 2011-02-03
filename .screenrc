@@ -11,4 +11,3 @@ bind -c jump o select Console
 bind -c jump e select Server
 bindkey "^j" command -c jump
 
-shell -${SHELL}
