@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/dan/razoo/src/razoo/db/sql'
+let g:netrw_dirhist_2='/Users/dan/.rvm/gems/ree-1.8.7-2010.02@razoo/gems/shoulda-2.10.3/lib'
+let g:netrw_dirhist_3='/Users/dan/Projects/croc/spec'
+let g:netrw_dirhist_4='/Users/dan/Projects/croc/bin'
+let g:netrw_dirhist_5='/Users/dan/razoo/src/razoo/app/views'
+let g:netrw_dirhist_6='/Users/dan/.rvm/gems/ree-1.8.7-2010.02@razoo/gems/pvande-differ-0.1.1/lib/differ'
+let g:netrw_dirhist_7='/Users/dan/razoo/src/razoo/vendor/rails/actionpack'
+let g:netrw_dirhist_8='/Users/dan/.rvm/gems/ree-1.8.7-2010.02@razoo_rails3/gems/bundler-1.0.10'
+let g:netrw_dirhist_9='/Users/dan/razoo/src/razoo/app/views/users'

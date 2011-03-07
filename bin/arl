@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+
+module ActiveRecord
+
+  class Model
+    attr_accessor :name
+    attr_accessor :columns
+ 
+    TYPES = %w(integer decimal string datetime float boolean text binary date geometry time)
+
+    def initialize(name)
+      @name = name
+      @columns = []
+    end
+
+    def column(name, type, options = {})
+      @columns << [name, type]
+    end
+
+    def method_missing(name, *args)
+      name = name.to_s
+      raise "Unexpected column type '#{name}'" unless TYPES.include?(name)
+
+      column(args[0], name, args[1,-1])
+    end
+  end
+
+  class Schema
+    def self.models
+      @models
+    end
+
+    def self.define(options = {}, &block)
+      @models = {}
+      instance_eval(&block)
+    end
+
+    def self.create_table(name, options)
+      model = Model.new(name)
+      yield model
+      @models[name] = model
+    end
+
+    def self.add_index(*args)
+    end
+  end
+end
+
+require 'db/schema'
+
+padding = ActiveRecord::Model::TYPES.inject(0) {|max, v| (len = v.length) > max ? len : max} + 2 # length of the longest string in TYPES
+
+q = ARGV[0]
+matches = ActiveRecord::Schema.models.select {|name, val| name[q]}
+matches.each do |match|
+  puts match[0]
+  match[1].columns.each do |c|
+    puts "  " + c[1].to_s.ljust(padding) + " " + c[0]
+  end
+end
+
