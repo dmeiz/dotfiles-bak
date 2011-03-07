@@ -1,3 +1,3 @@
 
-PATH=/opt/local/bin:~/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#PATH=/opt/local/bin:~/bin:$PATH
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

@@ -1,5 +1,6 @@
 set -o vi
 
+T_BASHRC=weak
 alias screen='screen -h 5000'
 alias ls='ls -p'
 alias :G='git'
@@ -13,9 +14,9 @@ export EDITOR=vim
 export BUNDLER_EDITOR=/Users/dan/bin/bvim
 export GEM_OPEN_EDITOR=/Users/dan/bin/bvim
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-PATH=$PATH:/opt/local/bin
+#export PATH=$PATH:/opt/local/bin
 
-. ~/.bashrc-local
+#. ~/.bashrc-local
 
