@@ -1,5 +1,6 @@
 PATH=/opt/local/bin:/usr/local/bin:~/bin:$PATH
 SHELL=/bin/zsh
+bindkey "^[[3~" delete-char
 autoload -U colors && colors
 PS1="%{$fg[yellow]%}%~>%{$reset_color%}"
 BUNDLER_EDITOR=/opt/local/bin/vim

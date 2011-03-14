@@ -24,6 +24,7 @@
   rh = reset HEAD
   l = log --pretty='format:%h - %ar - %an - %Cred%s%Creset'
   lp = log -p
+  lb = log master..HEAD
   pu = pull --rebase
 
   [color]
