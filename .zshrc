@@ -1,4 +1,9 @@
-PATH=/opt/local/bin:/usr/local/bin:~/bin:$PATH
+# keep PATH from getting prefixed again in screen
+if [[ ! $PATH_SET = true ]]; then
+  PATH=/opt/local/bin:/usr/local/bin:~/bin:$PATH
+  export PATH_SET=true
+fi
+
 SHELL=/bin/zsh
 bindkey "^[[3~" delete-char
 autoload -U colors && colors
