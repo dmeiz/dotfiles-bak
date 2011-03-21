@@ -7,9 +7,17 @@ fi
 SHELL=/bin/zsh
 bindkey "^[[3~" delete-char
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}%~>%{$reset_color%}"
+autoload -Uz vcs_info
+
 BUNDLER_EDITOR=/opt/local/bin/vim
 export GEM_EDITOR=/Users/dan/bin/bvim
+
+zstyle ':vcs_info:git:*' formats '[%b] '
+precmd () {
+  vcs_info
+  psvar[1]="$vcs_info_msg_0_"
+}
+PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
 
 alias screen='screen -h 5000'
 alias ls='ls -p'

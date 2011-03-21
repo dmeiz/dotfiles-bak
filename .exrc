@@ -37,5 +37,6 @@ nnoremap <C-l> :grep <cword> app lib script<CR>
 nnoremap ' `
 nnoremap ` '
 nnoremap <leader>g :GundoToggle<CR>
+nmap <silent> <Leader>f :CommandT<CR>
 
 nmap <leader>w :%s/\s\+$//g<CR>

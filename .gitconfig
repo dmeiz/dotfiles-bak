@@ -26,6 +26,7 @@
   lp = log -p
   lb = log master..HEAD
   pu = pull --rebase
+  a = add -u
 
   [color]
     branch = auto
