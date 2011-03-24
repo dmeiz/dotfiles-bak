@@ -9,7 +9,7 @@
   di = diff
   dn = diff --name-status
   dc = diff --cached
-  st = status
+  st = status -s -b
   me = merge
   ms = merge --squash
   cp = cherry-pick
@@ -24,7 +24,10 @@
   rh = reset HEAD
   l = log --pretty='format:%h - %ar - %an - %Cred%s%Creset'
   lp = log -p
-  lb = log master..HEAD
+  lb = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' master..HEAD
+  lbp = log -p master..HEAD
+  lr = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' ORIG_HEAD..HEAD
+  lrp = log -p ORIG_HEAD..HEAD
   pu = pull --rebase
   a = add -u
 

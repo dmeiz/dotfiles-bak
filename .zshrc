@@ -9,6 +9,10 @@ bindkey "^[[3~" delete-char
 autoload -U colors && colors
 autoload -Uz vcs_info
 
+# turn on completion
+autoload -U compinit
+compinit
+
 BUNDLER_EDITOR=/opt/local/bin/vim
 export GEM_EDITOR=/Users/dan/bin/bvim
 
