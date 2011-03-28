@@ -23,14 +23,6 @@ precmd () {
 }
 PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
 
-alias screen='screen -h 5000'
-alias ls='ls -p'
-alias :G='git'
-alias :B='boson'
-alias :C='cheat'
-alias :T='thor'
-alias :TT='thor -T'
-alias rd='rdebug --no-stop'
 
 source ~/.zshrc-local
 source $HOME/.rake_completion.zsh

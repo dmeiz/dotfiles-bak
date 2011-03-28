@@ -1,3 +1,8 @@
-
-#PATH=/opt/local/bin:~/bin:$PATH
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias screen='screen -h 5000'
+alias ls='ls -p'
+alias :G='git'
+alias :B='boson'
+alias :C='cheat'
+alias :T='thor'
+alias :TT='thor -T'
+alias rd='rdebug --no-stop'
