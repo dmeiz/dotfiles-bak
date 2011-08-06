@@ -1,4 +1,6 @@
 rake
 thor
 cheat
-boson
+bundler
+open-gem
+ruby-debug

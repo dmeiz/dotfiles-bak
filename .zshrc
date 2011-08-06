@@ -5,15 +5,21 @@ if [[ ! $PATH_SET = true ]]; then
 fi
 
 SHELL=/bin/zsh
+
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.history
+
 bindkey "^[[3~" delete-char
 autoload -U colors && colors
 autoload -Uz vcs_info
 
 # turn on completion
-autoload -U compinit
-compinit
+#autoload -U compinit
+#compinit
 
-BUNDLER_EDITOR=/opt/local/bin/vim
+export EDITOR=/opt/local/bin/vim
+export BUNDLER_EDITOR=$EDITOR
 export GEM_EDITOR=/Users/dan/bin/bvim
 
 zstyle ':vcs_info:git:*' formats '[%b] '

@@ -18,6 +18,8 @@ set formatoptions=tcoql
 set grepprg=ack\ --text\ $*
 set autoindent
 set backspace=2
+"set background=dark
+"colorscheme solarized
 
 let mapleader = ","
 
@@ -31,12 +33,15 @@ command -nargs=* -complete=file T !thor <args>
 command TT !thor -T
 " command -nargs=1 Sch !ruby ~/Projects/pitch/arl.rb <args>|less
 command -nargs=1 Sch !arl <args>|less
+command -nargs=1 Find !find . -name '*<args>*'
 
-nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-l> :grep <cword> app lib script<CR>
 nnoremap ' `
 nnoremap ` '
-nnoremap <leader>g :GundoToggle<CR>
 nmap <silent> <Leader>f :CommandT<CR>
 
+nnoremap <leader>g :GundoToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
+
+runtime macros/matchit.vim
