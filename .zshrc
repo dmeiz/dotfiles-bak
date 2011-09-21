@@ -1,6 +1,6 @@
 # keep PATH from getting prefixed again in screen
 if [[ ! $PATH_SET = true ]]; then
-  PATH=/opt/local/bin:/usr/local/bin:~/bin:$PATH
+  export PATH=./bin:~/.rbenv/bin:~/.rbenv/shims:/opt/local/bin:/usr/local/bin:~/bin:$PATH
   export PATH_SET=true
 fi
 
@@ -33,4 +33,8 @@ PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
 source ~/.zshrc-local
 source $HOME/.rake_completion.zsh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# this isn't working; just adding rbenv shims to path for now
+# eval $(rbenv init -)
+
