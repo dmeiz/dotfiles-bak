@@ -190,6 +190,7 @@ g:rails_tabstop	rails.txt	/*g:rails_tabstop*
 g:rails_url	rails.txt	/*g:rails_url*
 g:vimball_home	pi_vimball.txt	/*g:vimball_home*
 g:vimball_mkdir	pi_vimball.txt	/*g:vimball_mkdir*
+greplace.txt	greplace.txt	/*greplace.txt*
 macros/rails.vim	rails.txt	/*macros\/rails.vim*
 manpage-pagedown	manpageview.txt	/*manpage-pagedown*
 manpage-pageup	manpageview.txt	/*manpage-pageup*
