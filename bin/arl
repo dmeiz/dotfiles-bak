@@ -6,7 +6,7 @@ module ActiveRecord
     attr_accessor :name
     attr_accessor :columns
  
-    TYPES = %w(integer decimal string datetime float boolean text binary date geometry time)
+    TYPES = %w(integer decimal string datetime float boolean text binary date geometry time unknown_primary_key)
 
     def initialize(name)
       @name = name
@@ -37,6 +37,7 @@ module ActiveRecord
 
     def self.create_table(name, options)
       model = Model.new(name)
+      model.column(options[:primary_key], 'some_primary_key') if options[:primary_key]
       yield model
       @models[name] = model
     end
