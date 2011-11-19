@@ -30,6 +30,8 @@ command -nargs=* D !ditz <args>
 command -nargs=1 C !cheat <args>|less
 command -nargs=* -complete=file B !boson <args>
 command -nargs=* -complete=file T !thor <args>
+command -nargs=* -complete=file A !rake <args>
+command AA !rake -T
 command TT !thor -T
 " command -nargs=1 Sch !ruby ~/Projects/pitch/arl.rb <args>|less
 command -nargs=1 Sch !arl <args>|less
