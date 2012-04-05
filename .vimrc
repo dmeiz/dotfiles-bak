@@ -7,6 +7,7 @@ filetype plugin on
 au BufRead,BufNewFile Thorfile setfiletype ruby
 au BufRead,BufNewFile *.spec setfiletype ruby
 
+set history=100
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -45,5 +46,6 @@ nmap <silent> <Leader>f :CommandT<CR>
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 runtime macros/matchit.vim

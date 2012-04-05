@@ -3,6 +3,7 @@
 
 [alias]
   c = commit
+  cf = commit -F .commit_message -e
   co = checkout
   cb = checkout -b
   br = branch
@@ -57,6 +58,7 @@
 
 [github]
 	user = dmeiz
+	token = a7b3404f6fd15890e53a39a1c3fda6d8
 
 [push]
   default = tracking
