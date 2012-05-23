@@ -18,9 +18,9 @@ autoload -Uz vcs_info
 #autoload -U compinit
 #compinit
 
-export EDITOR=/opt/local/bin/vim
-export BUNDLER_EDITOR=$EDITOR
-export GEM_EDITOR=/Users/dan/bin/bvim
+export EDITOR=/usr/bin/vim
+export GEM_EDITOR=~/bin/bvim
+export BUNDLER_EDITOR=$GEM_EDITOR
 
 zstyle ':vcs_info:git:*' formats '[%b] '
 precmd () {
@@ -29,12 +29,5 @@ precmd () {
 }
 PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
 
-
 source ~/.zshrc-local
-source $HOME/.rake_completion.zsh
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# this isn't working; just adding rbenv shims to path for now
-# eval $(rbenv init -)
-
+#source $HOME/.rake_completion.zsh

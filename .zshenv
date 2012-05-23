@@ -1,3 +1,5 @@
+source ~/.zshrc-rbenv
+
 alias screen='screen -h 5000'
 alias ls='ls -p'
 alias :G='git'

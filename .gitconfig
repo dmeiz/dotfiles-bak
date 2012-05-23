@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/dan/.gitignore
+  excludesfile = ~/.gitignore
 
 [alias]
   c = commit
@@ -24,6 +24,7 @@
   shn = show --name-status
   rh = reset HEAD
   l = log --pretty='format:%h - %ar - %an - %Cred%s%Creset'
+  lm10 = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' master~10..master
   lp = log -p
   lb = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' master..HEAD
   lbp = log -p master..HEAD

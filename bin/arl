@@ -6,7 +6,7 @@ module ActiveRecord
     attr_accessor :name
     attr_accessor :columns
  
-    TYPES = %w(integer decimal string datetime float boolean text binary date geometry time unknown_primary_key)
+    TYPES = %w(integer decimal string datetime float boolean text binary date geometry time unknown_primary_key timestamp)
 
     def initialize(name)
       @name = name
@@ -47,6 +47,7 @@ module ActiveRecord
   end
 end
 
+$: << '.'
 require 'db/schema'
 
 padding = ActiveRecord::Model::TYPES.inject(0) {|max, v| (len = v.length) > max ? len : max} + 2 # length of the longest string in TYPES
