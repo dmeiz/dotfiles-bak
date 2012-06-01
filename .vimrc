@@ -1,26 +1,33 @@
-syntax on
-highlight Comment ctermfg=DarkMagenta guifg=DarkMagenta
-filetype plugin on
 
 "call pathogen#runtime_append_all_bundles()
 
+" file type detection
+"
+filetype plugin on
 au BufRead,BufNewFile Thorfile setfiletype ruby
 au BufRead,BufNewFile *.spec setfiletype ruby
 
+" general settings
+"
+set nocompatible
 set history=100
 set tabstop=2
-set shiftwidth=2
 set expandtab
+set shiftwidth=2
 set laststatus=2
 set stl=%f%m\ (%l,%v)\ %P
-set nocompatible
 set formatoptions=tcoql
-"set grepprg=ack\ -a\ $*
-set grepprg=ack\ --text\ $*
+set grepprg=ack\ --text\ $* 
 set autoindent
 set backspace=2
-"set background=dark
-"colorscheme solarized
+
+" syntax highlighting
+"
+syntax enable
+set background=light
+let g:solarized_termtrans=1
+colorscheme solarized
+"highlight Comment ctermfg=DarkMagenta guifg=DarkMagenta
 
 let mapleader = ","
 
@@ -48,4 +55,4 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
-runtime macros/matchit.vim
+" runtime macros/matchit.vim
