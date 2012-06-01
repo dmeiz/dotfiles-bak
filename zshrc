@@ -32,6 +32,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zshrc.dan
+source ~/.zshrc.private # not checked into git
 
-# Customize to your needs...
-export PATH=./bin:/Users/dhensgen/.rbenv/bin:/Users/dhensgen/.rbenv/shims:/opt/local/bin:/usr/local/bin:/Users/dhensgen/bin:/Users/dhensgen/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin
