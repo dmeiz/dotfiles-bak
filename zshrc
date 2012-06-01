@@ -1,33 +1,37 @@
-# keep PATH from getting prefixed again in screen
-if [[ ! $PATH_SET = true ]]; then
-  export PATH=./bin:~/.rbenv/bin:~/.rbenv/shims:/opt/local/bin:/usr/local/bin:~/bin:$PATH
-  export PATH_SET=true
-fi
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-SHELL=/bin/zsh
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
 
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.history
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-bindkey "^[[3~" delete-char
-autoload -U colors && colors
-autoload -Uz vcs_info
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# turn on completion
-#autoload -U compinit
-#compinit
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-export EDITOR=/usr/bin/vim
-export GEM_EDITOR=~/bin/bvim
-export BUNDLER_EDITOR=$GEM_EDITOR
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-zstyle ':vcs_info:git:*' formats '[%b] '
-precmd () {
-  vcs_info
-  psvar[1]="$vcs_info_msg_0_"
-}
-PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-source ~/.zshrc-local
-#source $HOME/.rake_completion.zsh
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+export PATH=./bin:/Users/dhensgen/.rbenv/bin:/Users/dhensgen/.rbenv/shims:/opt/local/bin:/usr/local/bin:/Users/dhensgen/bin:/Users/dhensgen/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin
