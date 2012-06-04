@@ -54,5 +54,6 @@ nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>t :PromptVimTmuxCommand<cr>
 
 " runtime macros/matchit.vim
