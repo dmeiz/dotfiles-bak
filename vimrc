@@ -20,6 +20,7 @@ set formatoptions=tcoql
 set grepprg=ack\ --text\ $* 
 set autoindent
 set backspace=2
+set pastetoggle=<leader>p
 
 " syntax highlighting
 "
