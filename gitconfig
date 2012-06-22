@@ -23,13 +23,13 @@
   sh = show
   shn = show --name-status
   rh = reset HEAD
-  l = log --pretty='format:%h - %ar - %an - %Cred%s%Creset'
-  lm10 = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' master~10..master
+  l = log --pretty='format:%Creset%h - %ar - %an - %Cred%s%Creset'
+  lm10 = log --pretty='format:%Creset%h - %ar - %an - %Cred%s%Creset' master~10..master
   lp = log -p
-  lb = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' master..HEAD
+  lb = log --pretty='format:%Creset%h - %ar - %an - %Cred%s%Creset' master..HEAD
   lbp = log -p master..HEAD
   lbn = log --name-status master..HEAD
-  lr = log --pretty='format:%h - %ar - %an - %Cred%s%Creset' ORIG_HEAD..HEAD
+  lr = log --pretty='format:%Creset%h - %ar - %an - %Cred%s%Creset' ORIG_HEAD..HEAD
   lrp = log -p ORIG_HEAD..HEAD
   lrn = log --name-status ORIG_HEAD..HEAD
   pu = pull --rebase
