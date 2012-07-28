@@ -24,7 +24,7 @@ set backspace=2
 " syntax highlighting
 "
 syntax enable
-set background=light
+set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 "highlight Comment ctermfg=DarkMagenta guifg=DarkMagenta
