@@ -16,6 +16,7 @@ HISTFILE=~/.history
 # use vim mode on the command line
 #
 bindkey -v
+bindkey -M vicmd '?' history-incremental-search-backward
 
 # indicate when we're in command mode
 #
