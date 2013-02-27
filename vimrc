@@ -17,7 +17,7 @@ set shiftwidth=2
 set laststatus=2
 set stl=%f%m\ (%l,%v)\ %P
 set formatoptions=tcoql
-set grepprg=ack\ --text\ $* 
+set grepprg=ag\ $* 
 set autoindent
 set backspace=2
 
