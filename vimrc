@@ -57,3 +57,4 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " nnoremap <leader>t :PromptVimTmuxCommand<cr>
 
 " runtime macros/matchit.vim
+execute pathogen#infect()
