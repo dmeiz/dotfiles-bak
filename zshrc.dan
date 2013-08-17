@@ -1,7 +1,7 @@
 # keep PATH from getting prefixed again in screen
 if [[ ! $PATH_SET = true ]]; then
   source ~/.zshrc-rbenv
-  export PATH=./bin:/opt/local/bin:/usr/local/bin:~/bin:$PATH
+  export PATH=./.bundle/bin:./bin:./.bin:/opt/local/bin:/usr/local/bin:~/bin:/usr/local/heroku/bin:$PATH
   export PATH_SET=true
 fi
 

@@ -20,6 +20,7 @@ set formatoptions=tcoql
 set grepprg=ag\ $* 
 set autoindent
 set backspace=2
+set t_Co=256
 
 " syntax highlighting
 "
@@ -54,7 +55,8 @@ nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-" nnoremap <leader>t :PromptVimTmuxCommand<cr>
+nnoremap <leader>r <esc>:tabnext<cr>
+nnoremap <leader>e <esc>:tabprev<cr>
 
 " runtime macros/matchit.vim
 execute pathogen#infect()

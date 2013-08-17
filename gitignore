@@ -6,3 +6,5 @@ log
 tmp/tags
 vim/.netrwhist
 .bundle
+.bin
+.ruby-version
