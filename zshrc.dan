@@ -39,8 +39,6 @@ unsetopt correctall
 #compinit
 
 export EDITOR=/usr/bin/vim
-export GEM_EDITOR=~/bin/bvim
-export BUNDLER_EDITOR=$GEM_EDITOR
 
 zstyle ':vcs_info:git:*' formats '[%b] '
 precmd () {
