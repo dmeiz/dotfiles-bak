@@ -11,6 +11,7 @@ Bundle 'rails.vim'
 Bundle 'The-NERD-tree'
 Bundle 'rails.vim'
 Bundle 'fugitive.vim'
+Bundle 'ctrlp.vim'
 
 filetype plugin indent on
 
