@@ -1,9 +1,21 @@
-
-"call pathogen#runtime_append_all_bundles()
-
-" file type detection
+" vundle
 "
-filetype plugin on
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'rails.vim'
+Bundle 'The-NERD-tree'
+Bundle 'rails.vim'
+Bundle 'fugitive.vim'
+
+filetype plugin indent on
+
+" treat some files as ruby source
+"
 au BufRead,BufNewFile Thorfile setfiletype ruby
 au BufRead,BufNewFile *.spec setfiletype ruby
 
@@ -20,10 +32,10 @@ set formatoptions=tcoql
 set grepprg=ag\ $* 
 set autoindent
 set backspace=2
-set t_Co=256
 
-" syntax highlighting
+" colors and syntax highlighting
 "
+set t_Co=256
 syntax enable
 set background=dark
 let g:solarized_termtrans=1
@@ -59,4 +71,4 @@ nnoremap <leader>r <esc>:tabnext<cr>
 nnoremap <leader>e <esc>:tabprev<cr>
 
 " runtime macros/matchit.vim
-execute pathogen#infect()
+"execute pathogen#infect()
