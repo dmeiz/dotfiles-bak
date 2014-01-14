@@ -31,7 +31,7 @@
   lbn = log --name-status master..HEAD
   lr = log --pretty='format:%Creset%h - %ar - %an - %Cred%s%Creset' ORIG_HEAD..HEAD
   lrp = log -p ORIG_HEAD..HEAD
-  lrn = log --name-status ORIG_HEAD..HEAD
+  lrn = log --stat ORIG_HEAD..HEAD
   pu = pull --rebase
   a = add -u
 
