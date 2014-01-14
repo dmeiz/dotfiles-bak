@@ -12,6 +12,7 @@ Bundle 'The-NERD-tree'
 Bundle 'rails.vim'
 Bundle 'fugitive.vim'
 Bundle 'ctrlp.vim'
+Bundle "mattn/emmet-vim"
 
 filetype plugin indent on
 
@@ -30,7 +31,7 @@ set shiftwidth=2
 set laststatus=2
 set stl=%f%m\ (%l,%v)\ %P
 set formatoptions=tcoql
-set grepprg=ag\ $* 
+set grepprg=ag\ --nogroup\ --nocolor
 set autoindent
 set backspace=2
 
@@ -67,9 +68,19 @@ nmap <silent> <Leader>f :CommandT<CR>
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>r <esc>:tabnext<cr>
 nnoremap <leader>e <esc>:tabprev<cr>
 
 " runtime macros/matchit.vim
 "execute pathogen#infect()
+
+" use silver searcher to index with ctrlp
+"
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' 
+
+" ignore some files and dirs when indexing with ctrlp
+"
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
