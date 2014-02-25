@@ -4,6 +4,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
+set shell=/bin/bash
 
 Bundle 'gmarik/vundle'
 
