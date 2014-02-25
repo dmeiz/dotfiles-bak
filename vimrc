@@ -35,6 +35,7 @@ set formatoptions=tcoql
 set grepprg=ag\ --nogroup\ --nocolor
 set autoindent
 set backspace=2
+set backupdir=~/tmp
 
 " colors and syntax highlighting
 "
