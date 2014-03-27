@@ -6,7 +6,6 @@ fi
 
 
 SHELL=/bin/zsh
-TERM=linux
 
 HISTSIZE=1000
 SAVEHIST=1000
