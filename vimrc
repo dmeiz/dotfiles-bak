@@ -36,6 +36,7 @@ set grepprg=ag\ --nogroup\ --nocolor
 set autoindent
 set backspace=2
 set backupdir=~/tmp
+set cursorline
 
 " colors and syntax highlighting
 "
@@ -48,19 +49,25 @@ colorscheme solarized
 
 let mapleader = ","
 
+" Quickly open and reload vimrc
+"
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr> :nohl <cr>
+
+" Arrow keys resize current viewport
+"
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+
 command MigrateDev wa|!boson load_db prod && rake db:migrate DM_ENV=production RAILS_ENV=development --trace
 command -nargs=1 Fmethod grep "def\s+(self\.)?<args>"
 command -nargs=* -complete=file G !git <args>
-command -nargs=* D !ditz <args>
-command -nargs=1 C !cheat <args>|less
-command -nargs=* -complete=file B !boson <args>
+command -nargs=* -complete=file B !bundle exec <args>
 command -nargs=* -complete=file T !thor <args>
-command -nargs=* -complete=file A !rake <args>
-command AA !rake -T
 command TT !thor -T
-" command -nargs=1 Sch !ruby ~/Projects/pitch/arl.rb <args>|less
 command -nargs=1 Sch !arl <args>|less
-command -nargs=1 Find !find . -name '*<args>*'
 
 nnoremap <C-l> :grep <cword> app lib script<CR>
 nnoremap ' `
@@ -71,7 +78,7 @@ nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap <leader>r <esc>:tabnext<cr>
-nnoremap <leader>e <esc>:tabprev<cr>
+nnoremap <leader>t <esc>:tabprev<cr>
 
 " runtime macros/matchit.vim
 "execute pathogen#infect()
