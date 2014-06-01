@@ -1,19 +1,19 @@
-" vundle
-"
+set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-set shell=/bin/bash
+" vundle
+"
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'rails.vim'
-Bundle 'The-NERD-tree'
-Bundle 'rails.vim'
-Bundle 'fugitive.vim'
-Bundle 'ctrlp.vim'
-Bundle "mattn/emmet-vim"
+Plugin 'rails.vim'
+Plugin 'The-NERD-tree'
+Plugin 'fugitive.vim'
+Plugin 'ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+call vundle#end()
 
 filetype plugin indent on
 
@@ -24,7 +24,7 @@ au BufRead,BufNewFile *.spec setfiletype ruby
 
 " general settings
 "
-set nocompatible
+set shell=/bin/bash
 set history=100
 set tabstop=2
 set expandtab
@@ -77,8 +77,8 @@ nmap <silent> <Leader>f :CommandT<CR>
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
-nnoremap <leader>r <esc>:tabnext<cr>
-nnoremap <leader>t <esc>:tabprev<cr>
+nnoremap <leader>t <esc>:tabnext<cr>
+nnoremap <leader>r <esc>:tabprev<cr>
 
 " runtime macros/matchit.vim
 "execute pathogen#infect()
