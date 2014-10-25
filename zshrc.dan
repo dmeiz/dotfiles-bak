@@ -1,9 +1,9 @@
-# keep PATH from getting prefixed again in screen
+# keep PATH from getting prefixed again in tmux
+#
 if [[ ! $PATH_SET = true ]]; then
   export PATH=./.bundle/bin:./bin:./.bin:/opt/local/bin:/usr/local/bin:~/bin:/usr/local/heroku/bin:$PATH
   export PATH_SET=true
 fi
-
 
 SHELL=/bin/zsh
 
@@ -39,6 +39,8 @@ unsetopt correctall
 
 export EDITOR=/usr/bin/vim
 
+# display git branch in prompt
+#
 zstyle ':vcs_info:git:*' formats '[%b] '
 precmd () {
   vcs_info

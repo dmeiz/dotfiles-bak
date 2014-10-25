@@ -33,5 +33,11 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zshrc.dan
-source ~/.zshrc.private # not checked into git
+
+# source setting not checked into git
+#
+if [ -f .zshrc.private ]
+then
+  source ~/.zshrc.private
+fi
 
