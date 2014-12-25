@@ -13,6 +13,8 @@ Plugin 'The-NERD-tree'
 Plugin 'fugitive.vim'
 Plugin 'ctrlp.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'easygrep'
+
 call vundle#end()
 
 filetype plugin indent on
