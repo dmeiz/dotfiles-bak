@@ -1,1 +1,5 @@
 export PATH="/Users/dhensgen/.rbenv/shims:/Users/dhensgen/.rbenv/bin:$PATH"
+export DEVELOPMENT_NO_ASSETS_DEBUG=true
+export PEARUP_URL=https://dev2.pearup.com
+export PEARUP_PUBLIC=c0c44e35-e995-4a9b-d6b6-5c7052dd4163
+export PEARUP_PRIVATE

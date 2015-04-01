@@ -22,7 +22,7 @@ filetype plugin indent on
 " treat some files as ruby source
 "
 au BufRead,BufNewFile Thorfile setfiletype ruby
-au BufRead,BufNewFile *.spec setfiletype ruby
+au BufRead,BufNewFile *.jsx setfiletype ruby
 
 " general settings
 "
@@ -34,11 +34,13 @@ set shiftwidth=2
 set laststatus=2
 set stl=%f%m\ (%l,%v)\ %P
 set formatoptions=tcoql
-set grepprg=ag\ --nogroup\ --nocolor
+set grepprg=ag\ --nogroup\ --nocolor\ --case-sensitive
 set autoindent
 set backspace=2
 set backupdir=~/tmp
 set cursorline
+set vb " turn on visualbell
+set t_vb= " but set it to do nothing; this turns off annoying beeping
 
 " colors and syntax highlighting
 "
@@ -79,8 +81,8 @@ nmap <silent> <Leader>f :CommandT<CR>
 nnoremap <leader>g :GundoToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
-nnoremap <leader>t <esc>:tabnext<cr>
-nnoremap <leader>r <esc>:tabprev<cr>
+nnoremap <leader>t :tabnext<cr>
+nnoremap <leader>r :tabprev<cr>
 
 " runtime macros/matchit.vim
 "execute pathogen#infect()

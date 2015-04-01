@@ -48,3 +48,6 @@ precmd () {
 }
 PS1="%{$fg[yellow]%}%(1v.%1v.)%~>%{$reset_color%}"
 
+function serve_dir {
+  ruby -run -e httpd . -p 9090
+}
