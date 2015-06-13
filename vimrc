@@ -41,6 +41,7 @@ set backupdir=~/tmp
 set cursorline
 set vb " turn on visualbell
 set t_vb= " but set it to do nothing; this turns off annoying beeping
+set nobackup " don't bother with .swp, .swo files
 
 " colors and syntax highlighting
 "
