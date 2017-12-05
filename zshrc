@@ -5,6 +5,14 @@ if [[ ! $PATH_SET = true ]]; then
   export PATH_SET=true
 fi
 
+# ohmyzsh
+#
+export ZSH=/Users/dhensgen/.oh-my-zsh
+plugins=(
+  git
+)
+source $ZSH/oh-my-zsh.sh
+
 SHELL=/bin/zsh
 
 HISTSIZE=1000
@@ -52,3 +60,4 @@ function serve_dir {
   ruby -run -e httpd . -p 9090
 }
 
+eval "$(rbenv init -)"
