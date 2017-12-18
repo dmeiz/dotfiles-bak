@@ -15,6 +15,7 @@ Plugin 'ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'easygrep'
 Plugin 'commentary'
+Plugin 'csv.vim'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
