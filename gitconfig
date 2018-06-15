@@ -65,3 +65,5 @@
   default = tracking
 [merge]
 	tool = vimdiff
+[credential]
+	helper = osxkeychain
