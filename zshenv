@@ -7,5 +7,6 @@ alias less='TERM=linux less'
 alias git='TERM=linux git'
 alias push-origin='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 alias be-pry="be pry -r './config/environment'"
-alias ssh-rfe='ssh apache@fe05.vpc248.customink.com'
+alias ssh-rfe='ssh apache@fe08.vpc248.customink.com'
+alias ssh-signaler='ssh apache@signaler01.vpc236.customink.com'
 alias flush-dns='sudo killall -HUP mDNSResponder'
