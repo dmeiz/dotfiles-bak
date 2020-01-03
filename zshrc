@@ -7,7 +7,7 @@ fi
 
 # ohmyzsh
 #
-export ZSH=/Users/dhensgen/.oh-my-zsh
+export ZSH=/Users/danhensgen/.oh-my-zsh
 plugins=(
   git
 )
@@ -61,3 +61,4 @@ function serve_dir {
 }
 
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
