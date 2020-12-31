@@ -85,6 +85,8 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap <leader>t :tabnext<cr>
 nnoremap <leader>r :tabprev<cr>
+nnoremap <leader>p :set nopaste<cr>
+nnoremap <leader>P :set paste<cr>
 
 " runtime macros/matchit.vim
 "execute pathogen#infect()

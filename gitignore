@@ -9,3 +9,4 @@ vim/.netrwhist
 .bin
 .ruby-version
 tags
+Brewfile.lock.json
